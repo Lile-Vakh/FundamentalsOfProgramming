@@ -1,0 +1,23 @@
+In this assignment, you are going to realize a simple chat program by means of sockets.
+Please recall the corresponding slides from the lecture. subsequently, implement the public static
+method main of class Chat.
+
+The communication is meant to proceed as follows.
+
+The program asks the user for some input (already provided in the template). This query is repeated
+until a connection has been established or the user types exit.
+If the user inputs something without :, the input is interpreted as a port, and the program tries to
+create a ServerSocket for that port and wait for connections. The server waits for exactly one connection.
+If the user inputs something with a :, the input is interpreted as <host>:<port> and the program tries
+to connect with the given host at the specified port.
+The two participants exchange messages. The server starts to send. Alternatively, the program waits
+for input from the user and the socket.
+One of the participants inputs exit. Then both programs should terminate.
+Handle all possibly occurring exceptions appropriately. Output precise messages and decide whether
+you may want to continue program execution despite the exception or not. Make sure that when
+terminating the program, all sockets as well as all Writers and Readers have been closed.
+Instead of calling close() at appropriate places, you also may use finally blocks try-with-resource-statements.
+
+Test your program by chatting with yourself or one of your fellow students! Take care that you only
+use port numbers exceeding 1024. Be aware that you may have to enable your program by your firewall.
+
