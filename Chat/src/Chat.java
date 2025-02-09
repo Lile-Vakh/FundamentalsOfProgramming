@@ -50,10 +50,6 @@ public class Chat extends MiniJava {
             }
         }
 
-        // This notation automatically insert a final close(), see
-        // https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
-        // The true in Printwriter implies that after each print, a flush() is executed.
-
         try (BufferedReader in = new BufferedReader(
                 new InputStreamReader(sock.getInputStream()));
              PrintWriter out = new PrintWriter(sock.getOutputStream(),
